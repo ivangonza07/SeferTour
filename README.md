@@ -1,62 +1,142 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400"></a></p>
+# SeferTour
 
-<p align="center">
-<a href="https://travis-ci.org/laravel/framework"><img src="https://travis-ci.org/laravel/framework.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
+## 📖 Descripción
 
-## About Laravel
+Aplicación web de gestión de tours/viajes desarrollada con el framework **Laravel 8**. El proyecto proporciona una plataforma para la reserva y gestión de paquetes turísticos.
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+## 🚀 Características
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+- **Framework Laravel 8** - Arquitectura MVC robusta
+- **Sistema de autenticación** - Registro e inicio de sesión de usuarios
+- **Panel de administración** - Gestión de tours y reservas
+- **Base de datos MySQL** - Almacenamiento de datos persistente
+- **Diseño responsive** - Interfaz adaptable a diferentes dispositivos
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+## 📋 Requisitos
 
-## Learning Laravel
+- **PHP** 7.3 o superior
+- **Composer** - Gestor de dependencias PHP
+- **MySQL** 5.7+ o **MariaDB**
+- **Node.js** y **npm** - Para compilación de assets
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+## 🛠️ Tecnologías
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains over 1500 video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+| Tecnología | Versión | Descripción |
+|------------|---------|-------------|
+| Laravel | 8.x | Framework PHP |
+| PHP | 7.3+ | Lenguaje del servidor |
+| MySQL | 5.7+ | Base de datos |
+| Blade | - | Motor de plantillas |
+| Bootstrap | 4.x | Framework CSS |
+| jQuery | 3.x | Librería JavaScript |
 
-## Laravel Sponsors
+## 📁 Estructura del Proyecto
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the Laravel [Patreon page](https://patreon.com/taylorotwell).
+```
+SeferTour/
+├── app/                    # Código de la aplicación
+│   ├── Http/               # Controladores y middleware
+│   ├── Models/             # Modelos Eloquent
+│   └── Providers/          # Proveedores de servicios
+├── bootstrap/              # Archivos de arranque
+├── config/                 # Configuración de la aplicación
+├── database/               # Migraciones y seeders
+│   ├── migrations/
+│   └── seeders/
+├── public/                 # Archivos públicos (index.php, assets)
+├── resources/              # Vistas y assets
+│   ├── views/              # Plantillas Blade
+│   ├── css/
+│   └── js/
+├── routes/                 # Definición de rutas
+│   └── web.php
+├── storage/                # Logs, cache, sesiones
+├── tests/                  # Pruebas unitarias
+├── composer.json           # Dependencias PHP
+├── package.json            # Dependencias Node.js
+├── webpack.mix.js          # Configuración de Webpack
+└── docker-compose.yml      # Configuración Docker
+```
 
-### Premium Partners
+## 🔧 Instalación
 
-- **[Vehikl](https://vehikl.com/)**
-- **[Tighten Co.](https://tighten.co)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Cubet Techno Labs](https://cubettech.com)**
-- **[Cyber-Duck](https://cyber-duck.co.uk)**
-- **[Many](https://www.many.co.uk)**
-- **[Webdock, Fast VPS Hosting](https://www.webdock.io/en)**
-- **[DevSquad](https://devsquad.com)**
-- **[Curotec](https://www.curotec.com/)**
-- **[OP.GG](https://op.gg)**
+### 1. Clonar el repositorio
 
-## Contributing
+```bash
+git clone https://github.com/ivangonza07/SeferTour.git
+cd SeferTour
+```
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+### 2. Instalar dependencias PHP
 
-## Code of Conduct
+```bash
+composer install
+```
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
+### 3. Configurar entorno
 
-## Security Vulnerabilities
+```bash
+cp .env.example .env
+```
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
+Edita el archivo `.env` con tus credenciales de base de datos:
 
-## License
+```env
+DB_CONNECTION=mysql
+DB_HOST=127.0.0.1
+DB_PORT=3306
+DB_DATABASE=sefertour
+DB_USERNAME=root
+DB_PASSWORD=
+```
 
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+### 4. Generar clave de aplicación
+
+```bash
+php artisan key:generate
+```
+
+### 5. Ejecutar migraciones
+
+```bash
+php artisan migrate
+```
+
+### 6. Instalar dependencias Node.js (opcional)
+
+```bash
+npm install
+npm run dev
+```
+
+### 7. Iniciar servidor
+
+```bash
+php artisan serve
+```
+
+La aplicación estará disponible en `http://localhost:8000`
+
+## 🐳 Docker (Alternativa)
+
+El proyecto incluye configuración Docker:
+
+```bash
+docker-compose up -d
+```
+
+## 📖 Uso
+
+1. **Registro**: Crea una cuenta en `/register`
+2. **Inicio de sesión**: Accede en `/login`
+3. **Explorar tours**: Navega por el catálogo disponible
+4. **Reservar**: Selecciona y reserva tu tour
+
+## 👤 Autor
+
+**Ivan Gonzalez**
+- 🐙 GitHub: [@ivangonza07](https://github.com/ivangonza07)
+
+## 📄 Licencia
+
+Este proyecto está licenciado bajo la [MIT License](https://opensource.org/licenses/MIT).
